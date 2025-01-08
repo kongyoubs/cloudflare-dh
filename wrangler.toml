@@ -7,7 +7,7 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "libcuda.so"
+CUSTOM_DOMAIN = "kytd.us.kg"
 
 [env.dev.vars]
 MODE = "debug"
@@ -16,7 +16,7 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 [env.production]
 name = "cloudflare-docker-proxy"
 # routes = [
-#   { pattern = "dh.kytd.us.kg", custom_domain = true },
+    { pattern = "dh.kytd.us.kg", custom_domain = true },
 #   { pattern = "quay.kytd.us.kg", custom_domain = true },
 #   { pattern = "gcr.kytd.us.kg", custom_domain = true },
 #   { pattern = "k8s-gcr.kytd.us.kg", custom_domain = true },
@@ -31,7 +31,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-# route = { pattern = "docker-staging.kytd.us.kg", custom_domain = true }
+ route = { pattern = "docker-staging.kytd.us.kg", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
